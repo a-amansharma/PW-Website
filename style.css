@@ -56,7 +56,7 @@ header div {
     }
 
     .logo {
-        width: 230px;
+        width: 200px;
     }
 }
 @media(max-width:500px) {
@@ -1613,9 +1613,7 @@ h1{
   }
 }
 
-
-
-footer {
+footer{
     background-color: black;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -1623,7 +1621,7 @@ footer {
     display: grid;
     grid-template-columns: 8fr 5fr 5fr 4fr;
     gap: 20px;
-    margin: 0;
+    margin-bottom: 50px;
     margin-top: 250px;
 }
 
@@ -1659,10 +1657,12 @@ footer {
 
 
 @media (max-width: 1300px) {
-    footer {
+    footer{
     gap: 20px;
     margin: 0;
     margin-top: 200px;
+    margin-bottom: 50px;
+
 }
 
 .footer-brand-name img {
@@ -1696,6 +1696,7 @@ footer {
     gap: 10px;
     margin-top: 150px;
     grid-template-columns: 3fr 3fr 3fr 3fr;
+    margin-bottom: 40px;
 }
 
 .footer-brand-name img {
@@ -1721,6 +1722,7 @@ footer {
     font-size: 0.8rem;
     padding: 2px;
 }
+
 }
 
 @media (max-width: 500px) {
@@ -1731,8 +1733,8 @@ footer {
     grid-template-columns: 6fr 4fr 5fr 3fr;
     gap: 0px;
     margin: 0;
-    margin-top: 150px;
-    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 .footer-brand-name img {
@@ -1761,4 +1763,41 @@ footer {
     color: hwb(0 65% 17%);
     padding: 1.5px;
 }
+}
+
+
+.amansharma{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    align-items: baseline;
+    padding: 60px;
+}
+.created{
+    color: orange;
+    font-family:monospace;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.aman{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+@media(max-width:500px){
+    .amansharma{
+        margin:0px;
+        padding-bottom: 20px;
+    }
+    .created{
+        font-size: 0.35rem;
+        font-weight: 600;
+    }
+    .aman{
+        font-size: 0.5rem;
+        padding-left: 7px;
+    }
 }
