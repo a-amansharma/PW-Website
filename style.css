@@ -1768,7 +1768,7 @@ footer{
 
 .amansharma{
     display: flex;
-    justify-content: center;
+    justify-content: right;
     margin: 40px;
     align-items: baseline;
     padding: 60px;
