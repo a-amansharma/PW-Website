@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Modal with External Login</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Modal container */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Modal content styling */
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+    }
+
+    /* Background blur effect */
+    .blurred {
+      filter: blur(5px);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to My Website</h1>
+  <button id="loginBtn">Login</button>
+
+  <!-- Modal Structure -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content" id="modalContent">
+      <!-- External content will be loaded here -->
+    </div>
+  </div>
+
+  <script>
+    const loginBtn = document.getElementById('loginBtn');
+    const loginModal = document.getElementById('loginModal');
+    const modalContent = document.getElementById('modalContent');
+    const body = document.body;
+
+    // Show the modal and apply blur effect to the background
+    loginBtn.addEventListener('click', async () => {
+      loginModal.style.display = 'flex';
+      body.classList.add('blurred'); // Apply background blur
+
+      // Load content dynamically from login.html
+      const response = await fetch('login.html');
+      const htmlContent = await response.text();
+      modalContent.innerHTML = htmlContent;
+    });
+
+    // Close the modal and remove blur effect
+    modalContent.addEventListener('click', (event) => {
+      if (event.target && event.target.id === 'closeBtn') {
+        loginModal.style.display = 'none';
+        body.classList.remove('blurred'); // Remove background blur
+      }
+    });
+
+    // Close modal when clicking outside the content
+    window.addEventListener('click', (event) => {
+      if (event.target === loginModal) {
+        loginModal.style.display = 'none';
+        body.classList.remove('blurred'); // Remove background blur
+      }
+    });
+  </script>
+
+</body>
+</html>

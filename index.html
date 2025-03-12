@@ -7,7 +7,9 @@
     <title>Institute of Innovation</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="files/pw.png">
+    
 </head>
+
 <body bgcolor="black">
     <main>
         <!-- Background Video -->
@@ -40,10 +42,10 @@
             </div>
             <div class="but2">
                 <span>
-                    <button class="login">Login</button>
+                    <button onclick="document.location='login.html'" class="login">Login</button>
                 </span>
                 <span>
-                    <button class="appl">Apply Now</button>
+                    <button onclick="document.location='login.html'" class="appl">Apply Now</button>
                 </span>
 
             </div>
@@ -55,14 +57,18 @@
                 <span style="color: white;">your future</span>
             </div>
             <div class="middle2">
-                <p style="color: white; ">India's best alternative of <span
+                <p style="color: white;">India's best alternative of <span
                         style="color: orange; font-size: larger;">Tranditional</span> CS Engineering and Management</p>
             </div>
-            <div class="broch"><button>Download Brochure</button></div>
-
+            <div class="broch">
+                <a href="files/brochure.pdf" download>
+                    <button onclick="showPDF()" >Download Brochure</button>
+                </a>
+            
+            </div>
         </section>
         <section class="below">
-            <button class="up-but">Know our Story</button>
+            <button onclick="window.open('https://pwioi.com/', '_blank')" class="up-but">Know our Story</button>
             <button>What's New</button>
             <button>Curriculum</button>
             <button class="down-but">Connect US</button>
@@ -375,9 +381,10 @@
             </div>
         </footer>
 
-<div class="amansharma">
-    <span class="created">Created by </span>
-    <span class="aman"> Aman Sharma</span>
-</div>
+        <div class="amansharma">
+            <span class="created">Designed by </span>
+            <span class="aman"> Aman Sharma</span>
+        </div>
 </body>
+
 </htmL>

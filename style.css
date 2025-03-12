@@ -60,9 +60,6 @@ header div {
     }
 }
 @media(max-width:500px) {
-    .but2 {
-        display: none;
-    }
 }
 .but button {
     background-color: black;
@@ -263,6 +260,7 @@ p{
     p {
         font-size: 0.6rem;
     }
+
 }
 
 
@@ -445,7 +443,7 @@ p{
     }
 
     .head {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .four-cards img {
@@ -456,6 +454,16 @@ p{
         color: white;
         font-size: 1rem;
         font-weight: bold;
+    }
+    header{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+   
+    }
+    .logo{
+    margin-left: 63px;
+    width: 140px;
     }
 }
 
@@ -1765,13 +1773,12 @@ footer{
 }
 }
 
-
 .amansharma{
     display: flex;
     justify-content: right;
     margin: 40px;
     align-items: baseline;
-    padding: 60px;
+    padding: 0px;
 }
 .created{
     color: orange;
