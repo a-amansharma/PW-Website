@@ -1395,10 +1395,10 @@ h1{
 }
 
 /* Mobile view (max-width: 768px) */
-@media (max-width: 1068px) {
+@media (max-width: 1100px) {
   .mentor {
     font-size: 3rem;
-    margin-bottom: -50px;
+    margin-bottom: 100px;
 }
   .slider{
     margin-bottom: -250px;
